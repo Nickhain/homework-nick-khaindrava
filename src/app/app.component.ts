@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './interfaces/User';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  UserData: User[] = [];
+
+  getUserData(item: User[]) {
+    this.UserData = item;
+  }
 }

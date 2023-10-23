@@ -1,0 +1,24 @@
+<form [formGroup]="userGroup" class="userForm">
+    <div class="input-div">
+        <label>First Name</label>
+        <input type="text" formControlName="firstName">
+    </div>
+    <div class="input-div">
+        <label>Last Name</label>
+        <input type="text" formControlName="lastName">
+    </div>
+    <div class="input-div">
+        <label>Date of Birth</label>
+        <input type="date" formControlName="dateOfBirth">
+    </div>
+    <div class="input-div">
+        <label>Phone Number</label>
+        <input type="text" formControlName="phoneNum">
+    </div>
+    <div class="input-div">
+        <label>Email</label>
+        <input type="text" formControlName="email">
+    </div>
+    <button (click)="addUser()" [disabled]="!userGroup.valid">Add User</button>
+    <button (click)="passData()">Pass Data to Parent</button>
+</form>
